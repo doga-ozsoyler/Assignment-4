@@ -32,8 +32,30 @@ Brent::Brent(int table_size){
 
 }
 
+int Brent::find_moving_cost(int h1, int h2) const{
+
+    int cost = 1;
+    int i = h1;
+    int noLoop = 0;
+    while(data_vec[i].valid != false && noLoop <= data_vec.size())
+    {
+        i = i + h2;
+        cost++;
+        noLoop++;
+    }
+    if(noLoop > data_vec.size())
+    {
+        cout << "List is full!!!" << endl;
+        return 0;
+    }
+
+    return cost;
+
+}
+
 
 void Brent::insert(int new_data){
+
 
 }
 
