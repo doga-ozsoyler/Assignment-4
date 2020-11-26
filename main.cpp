@@ -32,6 +32,16 @@ int main(){
     }
     cout << endl;
 
+    cout << "27 probe= " << list.find_num_probes(27) << endl;
+    cout << "18 probe= " << list.find_num_probes(18) << endl;
+    cout << "29 probe= " << list.find_num_probes(29) << endl;
+    cout << "28 probe= " << list.find_num_probes(28) << endl;
+    cout << "39 probe= " << list.find_num_probes(39) << endl;
+    cout << "13 probe= " << list.find_num_probes(13) << endl;
+    cout << "16 probe= " << list.find_num_probes(16) << endl;
+    cout << "42 probe= " << list.find_num_probes(42) << endl;
+    cout << "17 probe= " << list.find_num_probes(17) << endl;
+
 
     return 0;
 }

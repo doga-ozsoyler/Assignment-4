@@ -124,6 +124,25 @@ void Brent::insert(int new_data){
 
 int Brent::find_num_probes(int key) const{
 
+    int probe = 1;
+
+    int i = h1(key);
+    int noLoop = 0;
+
+    while(data_vec[i].data != key && noLoop <= data_vec.size())
+    {
+        i = (i + h2(key)) % data_vec.size();
+        probe++;
+        noLoop++;
+    }
+
+    if(noLoop > data_vec.size())
+    {
+        cout << key << " doesn't exit!!!" << endl;
+        return 0;
+    }
+
+    return probe;
 }
 
 
