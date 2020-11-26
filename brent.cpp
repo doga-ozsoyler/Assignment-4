@@ -149,4 +149,18 @@ int Brent::find_num_probes(int key) const{
 
 double Brent::find_average_num_probes() const{
 
+    double probe_sum = 0;
+    double data_num = 0;
+
+    for(int i = 0; i < data_vec.size(); i++)
+    {
+        if(data_vec[i].valid != false)
+        {
+            probe_sum = probe_sum + find_num_probes(data_vec[i].data);
+            data_num++;
+        }
+    }
+
+    return probe_sum / data_num;
+
 }
